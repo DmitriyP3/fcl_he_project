@@ -1,0 +1,32 @@
+# Непрерывная интеграция: при каждой отправке кода и каждом pull request
+# устанавливаются зависимости и запускаются все тесты.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Получить код
+        uses: actions/checkout@v4
+
+      - name: Установить Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-ci.txt
+
+      - name: Установить зависимости
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-ci.txt
+
+      - name: Запустить тесты
+        run: pytest -v

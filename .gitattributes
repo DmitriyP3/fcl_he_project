@@ -1,0 +1,10 @@
+# Все текстовые файлы хранятся и выдаются с окончаниями строк LF
+# (одинаково на Windows и Linux, без предупреждений LF/CRLF)
+* text=auto eol=lf
+
+# Двоичные файлы не трогать
+*.png binary
+*.jpg binary
+*.npz binary
+*.docx binary
+*.zip binary

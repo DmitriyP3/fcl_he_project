@@ -1,0 +1,10 @@
+# Ядро: обучение, шифрование CKKS, эксперименты
+numpy>=1.24
+tenseal>=0.3.14
+
+# Признаки из снимков (scripts/prepare_features.py) и диагноз по снимку (system.py).
+# Для видеокарты torch ставится по инструкции pytorch.org.
+torch
+torchvision
+timm
+medmnist

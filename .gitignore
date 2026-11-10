@@ -1,0 +1,48 @@
+# ── Окружение и кэши ─────────────────────────────────────────────
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# ── Данные (воспроизводятся scripts/prepare_features.py) ─────────
+data/
+
+# ── Результаты прогонов, модели, рисунки, логи ───────────────────
+results/
+models/
+figures/
+logs_*.txt
+*.log
+RESULTS.md
+
+# ── Вспомогательные скрипты (отчёты, рисунки, демо, архив) ───────
+run_all.py
+make_report.py
+make_archive.py
+smoke_test.py
+demo.py
+plots.py
+analyze.py
+verify.py
+bench_server.py
+reanalyze_temporal.py
+scripts/check_setup.py
+scripts/show_samples.py
+scripts/prepare_external_cohort.py
+requirements-lock.txt
+
+# ── Рабочие заметки и документы ──────────────────────────────────
+docs/
+CLAUDE.md
+НАЧНИ_ОТСЮДА.md
+.claude/
+temp*.txt
+*.zip
+*.docx
+
+# ── Системные файлы ──────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
